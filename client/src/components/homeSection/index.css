@@ -1,0 +1,47 @@
+.section1{
+    width:85%;
+    height:40rem;
+    display: flex;
+    margin-top: 10px;
+}
+.section1-left{
+    width:50%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.section1-left-image{
+    width:90%;
+    height:90%;
+}
+
+
+
+.seaction1-right{
+    width:50%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.section1-right-heading{
+    width:90%;
+    height:12rem;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+.section1-right-body{
+    width:90%;
+    height:25rem;
+    font-size: 30px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
