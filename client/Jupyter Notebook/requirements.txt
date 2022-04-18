@@ -1,2 +1,2 @@
-Create ur own MiniConda or Anaconda environment and install following pacakages :
+Create ur own MiniConda or Anaconda environment and install following packages :
 Numpy, Matplotlib, pandas, sckit-learn, seaborn
