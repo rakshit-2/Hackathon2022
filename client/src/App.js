@@ -159,7 +159,7 @@ const App = (props) =>
             </div>
             <div className='outer-result' style={{display:mainDisplayChange.result}}>
                 <div className='inner-result'>
-                    <Result />
+                    <Result m1={m1} m2={m2} m3={m3} m4={m4}/>
                 </div>
             </div>
             <div className='outer-remedies' style={{display:mainDisplayChange.remedies}}>
