@@ -523,6 +523,13 @@ const Info = (props) =>
     const[displayModaleSuccess,setDisplayModaleSuccess]=useState("none")
     const[ansString,setAnsString]=useState("")
     
+
+    const[m1,setM1]=useState("")
+    const[m2,setM2]=useState("")
+    const[m3,setM3]=useState("")
+    const[m4,setM4]=useState("")
+
+
     function handleSubmit()
     {
         var ans="";
@@ -560,10 +567,29 @@ const Info = (props) =>
             Axios.get('http://localhost:3001/result',
             {
                 params:{
-                    ans:ans,
+                    ans:li,
                   }
             }).then((res)=>{
-                console.log(res);
+                let a=(res.data)
+                var l=[]
+                var word=""
+                for(var i=0;i<a.length;i++)
+                {
+                    if(a[i]==="|")
+                    {
+                        l.push(word);
+                        word="";
+                    }
+                    else{
+                        word=word+a[i]
+                    }
+                    
+                }
+                l.push(word);
+                setM1(l[0]);
+                setM2(l[1]);
+                setM3(l[2]);
+                setM4(l[3]);
             });
         }
     }
@@ -796,6 +822,9 @@ const Info = (props) =>
             <div className='info-button' onClick={()=>{handleSubmit()}}>
                 Result
             </div>
+        </div>
+        <div class="info-button-outer">
+            {m1}{m2}{m3}{m4}
         </div>
         
     </div>

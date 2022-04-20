@@ -22,13 +22,14 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/result',(req,res)=>{
     let data1;
-    const check= spawn('python',['test.py',req.query.ans]);
+    const check= spawn('python',['check.py',req.query.ans]);
+    check.stderr.on('data', (data) => {
+        console.error(`stderr: ${data}`);
+    });
     check.stdout.on('data', function (data) {
-        console.log('Pipe data from python script ...');
-        data1 = data.toString();
+        console.log(data1 = data)
      });
      check.on('close', (code) => {
-        console.log(`child process close all stdio with code ${code}`);
         res.send(data1)
      });
 })

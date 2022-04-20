@@ -11,9 +11,9 @@ import sys
 warnings.filterwarnings("ignore")
 
 # Loading Saved Models
-final_svm_model = pickle.load(open('ml/models/saved_final_svm_model.pkl', 'rb'))
-final_nb_model = pickle.load(open('ml/models/saved_final_nb_model.pkl', 'rb'))
-final_rf_model = pickle.load(open('ml/models/saved_final_rf_model.pkl', 'rb'))
+final_svm_model = pickle.load(open('ml/models/saved_final_nb_model.pkl', 'rb'))
+final_nb_model = pickle.load(open('ml/models/saved_final_rf_model.pkl', 'rb'))
+final_rf_model = pickle.load(open('ml/models/saved_final_svm_model.pkl', 'rb'))
 
 # Reading Training dataset
 DATA_PATH = "ml/dataset/training.csv"

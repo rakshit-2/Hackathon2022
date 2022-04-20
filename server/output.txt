@@ -1,0 +1,8 @@
+rf_model_prediction: hepatitis A
+naive_bayes_prediction: Allergy
+svm_model_prediction: Allergy
+final_prediction: AIDS
+rf_model_prediction: Fungal infection
+naive_bayes_prediction: Fungal infection
+svm_model_prediction: Fungal infection
+final_prediction: Fungal infection
