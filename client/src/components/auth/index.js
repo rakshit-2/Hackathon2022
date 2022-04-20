@@ -163,22 +163,22 @@ const Auth = (props) =>
         <div className='signin-outer' style={{display:changeDisplay.signup}}>
           <div className="form-container sign-up-container">
               <form>
-                  <h1>Create Account</h1><br></br>
-                  <span>or use your email for registration</span><br></br>
+                  <div className='auth-h1'>Create Account</div><br></br>
+                  <div className='auth-span'>or use your email for registration</div><br></br>
                   <input type="text" placeholder="Name" onChange={(e)=>{namecheck(e.target.value)}}  required='required'/>
                   <input type="email" placeholder="Email" onChange={(e)=>{emailcheck(e.target.value)}} required='required'/>
                   <input type="password" placeholder="Password" onChange={(e)=>{passcheck(e.target.value)}} required='required'/>
                   <div className="validation-pass" style={{display:len}}>
-                    <i class="far fa-list-ol"></i>{'\u00A0'}Min 8 letters
+                  {'\u00A0'}Min 8 letters
                   </div>
                   <div className="validation-pass" style={{display:num}}>
-                      <i class="far fa-sort-numeric-down"></i>{'\u00A0'}Number
+                  {'\u00A0'}Number
                   </div>
                   <div className="validation-pass" style={{display:spe}}>
-                      <i class="far fa-sparkles"></i> {'\u00A0'}Special Character
+                  {'\u00A0'}Special Character
                   </div>
                   <div className="validation-pass" style={{display:upa}}>
-                      <i class="fad fa-font-case"></i>  {'\u00A0'}Uppercase letter
+                  {'\u00A0'}Uppercase letter
                   </div>
                   <button classname="button" type="button" onClick={submitValueCreate}>Sign Up</button><br></br>
 
@@ -191,7 +191,7 @@ const Auth = (props) =>
         <div className='signin-outer' style={{display:changeDisplay.signin}}>
           <div className="form-container sign-in-container">
               <form>
-                  <h1>SIGN IN</h1>
+                  <div className='auth-h1'>SIGN IN</div>
                   <div className="social-container">
                       <GoogleLogin
                           clientId="12638421748-adcs1tb8de2vk21g4rq3etaod7obfh95.apps.googleusercontent.com"
@@ -201,10 +201,10 @@ const Auth = (props) =>
                           cookiePolicy={'single_host_origin'}
                       />
                   </div>
-                  <span>or use your account</span><br></br>
+                  <div className='auth-span'>or use your account</div><br></br>
                   <input type="email" placeholder="Email" onChange={v=>setCheckEmail(v.target.value)}/>
                   <input type="password" placeholder="Password" onChange={v=>setCheckPass(v.target.value)} />
-                  <a>Forgot your password?</a>
+                  <div className='auth-a'>Forgot your password?</div>
                   <button type="button" onClick={submitValueCheck}>Sign In</button>
               </form>
           </div>
@@ -214,8 +214,8 @@ const Auth = (props) =>
             <div className="overlay">
               <div className='overley-outer2'>
                 <div className="overlay-panel overlay-right">
-                    <h1>{changeDisplay.heading}</h1>
-                    <p>{changeDisplay.textP}</p>
+                    <div className='auth-h1'>{changeDisplay.heading}</div>
+                    <div className='auth-p'>{changeDisplay.textP}</div>
                     <button className="ghost" onClick={()=>{changeButton(changeDisplay.count)}}>{changeDisplay.name}</button>
                 </div>
               </div>

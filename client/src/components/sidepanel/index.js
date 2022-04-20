@@ -19,10 +19,10 @@ const Sidepanel = (props) =>
             <div className='sidepanel-each' onClick={()=>{props.infoOpen()}}>
                 Info
             </div>
-            <div className='sidepanel-each'>
+            <div className='sidepanel-each' onClick={()=>{props.resultOpen()}}>
                 Result
             </div>
-            <div className='sidepanel-each'>
+            <div className='sidepanel-each' onClick={()=>{props.remediesOpen()}}>
                 Remedies
             </div>
         </div>

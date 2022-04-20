@@ -13,9 +13,12 @@
     "axios": "^0.26.1",
     "babel-plugin-macros": "^3.1.0",
     "child_process": "^1.0.2",
+    "google-map-react": "^2.1.10",
+    "google-maps-react": "^2.0.6",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-google-login": "^5.2.2",
+    "react-hook-google-maps": "0.0.3",
     "react-router-dom": "^5.2.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"

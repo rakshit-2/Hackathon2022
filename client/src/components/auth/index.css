@@ -5,16 +5,17 @@
 }
 
 
-h1 {
+.auth-h1 {
+    font-size: 2rem;
     font-weight: bold;
     margin: 0;
 }
 
-h2 {
+.auth-h2 {
     text-align: center;
 }
 
-p {
+.auth-p {
     font-size: 25px;
     font-weight: 100;
     line-height: 20px;
@@ -22,11 +23,11 @@ p {
     margin: 20px 0 30px;
 }
 
-span {
+.auth-span {
     font-size: 20px;
 }
 
-a {
+.auth-a {
     color: #333;
     font-size: 20px;
     text-decoration: none;
