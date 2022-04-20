@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
 import { useState } from 'react';
-const LungDisease = (props) => 
+const LegDisease = (props) => 
 {
     const[user,setUser]=useState([])
     const userData=[
-    {name:"Throat Irritation"},
-    {name:"Blood in Sputum"},]
+    {name:"Swollen Legs"},
+    {name:"Prominent Veins On Calf"},]
     
     useEffect(()=>{
     setUser(userData);
@@ -15,7 +15,7 @@ const LungDisease = (props) =>
     <>
     {user.map((user)=>(
         <label class="checkContainer">{user.name}
-        <input type="checkbox" name={user.name} onChange={(e) =>{props.handleChangeLung(e.target.checked,user.name)}}/>
+        <input type="checkbox" name={user.name} onChange={(e) =>{props.handleChangeLegs(e.target.checked,user.name)}}/>
         <span class="checkmark"></span>
     </label>
     ))}
@@ -23,4 +23,4 @@ const LungDisease = (props) =>
   );
 }
 
-export default LungDisease;
+export default LegDisease;

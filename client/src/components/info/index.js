@@ -2,15 +2,14 @@ import React, { useEffect } from 'react';
 import './index.css';
 import { useHistory } from 'react-router';
 import { useState } from 'react';
-import CommonDisease from './../formEach/commonDisease/index';
+import BodyDisease from './../formEach/bodyDisease/index';
 import SkinDisease from './../formEach/skinDisease/index';
-import LungDisease from './../formEach/LungDisease/index';
+import LegDisease from './../formEach/legDisease/index';
 import PainDisease from './../formEach/painDisease/index';
 import GenitalDisease from './../formEach/genitalDisease/index';
-import KidneyDisease from './../formEach/kidneyDisease/index';
 import StomachDisease from './../formEach/stomachDisease/index';
-import HeartDisease from './../formEach/heartDisease/index';
-import OralDisease from './../formEach/oralDisease/index';
+import EyeDisease from './../formEach/eyeDisease/index';
+import MouthDisease from './../formEach/mouthDisease/index';
 import BrainDisease from './../formEach/brainDisease/index';
 import Axios from 'axios';
 
@@ -47,23 +46,63 @@ const Info = (props) =>
         text10:'none',button101:'block',button102:'none',
     })
 
-    // common
-    const[mildFever,setMildFever]=useState(0);
-    const[weightLoss,setWeightLoss]=useState(0)
-    const[wateringEyes,setWateringEyes]=useState(0);
-    const[sweating,setSweating]=useState(0)
-    const[swollenExtremities,setSwollenExtremities]=useState(0);
-    function handleChangeCommon(e,i)
+    // ------------------body
+    const[LossOfAppetite,setLossOfAppetite]=useState(0);
+    const[LossOfBalance,setLossOfBalance]=useState(0)
+    const[LossOfSmell,setLossOfSmell]=useState(0);
+    const[WeightGain,setWeightGain]=useState(0)
+    const[WeightLoss,setWeightLoss]=useState(0);
+    const[MuscleWeakness,setMuscleWeakness]=useState(0);
+    const[HighFever,setHighFever]=useState(0)
+    const[MildFever,setMildFever]=useState(0);
+    const[ColdHandsAndFeets,setColdHandsAndFeets]=useState(0)
+    const[ThroatIrritation,setThroatIrritation]=useState(0);
+    const[FastHeartRate,setFastHeartRate]=useState(0)
+    const[Sweating,setSweating]=useState(0);
+    function handleChangeBody(e,i)
     {
-    if(i==='Mild Fever')
+    if(i==='Loss Of Appetite')
     {
         if(e===true)
         {
-            setMildFever(1)
+            setLossOfAppetite(1)
         }
         else
         {
-            setMildFever(0)
+            setLossOfAppetite(0)
+        }
+    }
+    else if(i==="Loss Of Balance")
+    {
+        if(e===true)
+        {
+            setLossOfBalance(1)
+        }
+        else
+        {
+            setLossOfBalance(0)
+        }
+    }
+    else if(i==="Loss Of Smell")
+    {
+        if(e===true)
+        {
+            setLossOfSmell(1)
+        }
+        else
+        {
+            setLossOfSmell(0)
+        }
+    }
+    else if(i==="Weight Gain")
+    {
+        if(e===true)
+        {
+            setWeightGain(1)
+        }
+        else
+        {
+            setWeightGain(0)
         }
     }
     else if(i==="Weight Loss")
@@ -77,15 +116,70 @@ const Info = (props) =>
             setWeightLoss(0)
         }
     }
-    else if(i==="Watering Eyes")
+    else if(i==="Muscle Weakness")
     {
         if(e===true)
         {
-            setWateringEyes(1)
+            setMuscleWeakness(1)
         }
         else
         {
-            setWateringEyes(0)
+            setMuscleWeakness(0)
+        }
+    }
+    else if(i==="High Fever")
+    {
+        if(e===true)
+        {
+            setHighFever(1)
+        }
+        else
+        {
+            setHighFever(0)
+        }
+    }
+    else if(i==="Mild Fever")
+    {
+        if(e===true)
+        {
+            setMildFever(1)
+        }
+        else
+        {
+            setMildFever(0)
+        }
+    }
+    else if(i==="Cold Hands And Feets")
+    {
+        if(e===true)
+        {
+            setColdHandsAndFeets(1)
+        }
+        else
+        {
+            setColdHandsAndFeets(0)
+        }
+    }
+    else if(i==="Throat Irritation")
+    {
+        if(e===true)
+        {
+            setThroatIrritation(1)
+        }
+        else
+        {
+            setThroatIrritation(0)
+        }
+    }
+    else if(i==="fast Heart Rate")
+    {
+        if(e===true)
+        {
+            setFastHeartRate(1)
+        }
+        else
+        {
+            setFastHeartRate(0)
         }
     }
     else if(i==="Sweating")
@@ -99,27 +193,28 @@ const Info = (props) =>
             setSweating(0)
         }
     }
-    else if(i==="Swollen Extremities")
+    }  
+
+    // --------brain
+    const[Anxiety,setAnxiety]=useState(0);
+    const[Depression,setDepression]=useState(0)
+    const[AlteredSensorium,setAlteredSensorium]=useState(0);
+    const[LackOfConcentration,setLackOfConcentration]=useState(0)
+    const[Unsteadiness,setUnsteadiness]=useState(0)
+    function handleChangeBrain(e,i)
+    {
+    if(i==="Anxiety")
     {
         if(e===true)
         {
-            setSwollenExtremities(1)
+            setAnxiety(1)
         }
         else
         {
-            setSwollenExtremities(0)
+            setAnxiety(0)
         }
     }
-    }  
-
-    // brain
-    const[depression,setDepression]=useState(0);
-    const[alteredSensorium,setAlteredSensorium]=useState(0)
-    const[lackOfConcentration,setLackOfConcentration]=useState(0);
-    const[unsteadiness,setUnsteadiness]=useState(0)
-    function handleChangeBrain(e,i)
-    {
-    if(i==="Depression")
+    else if(i==="Depression")
     {
         if(e===true)
         {
@@ -165,137 +260,156 @@ const Info = (props) =>
     }
     }
 
-    // genital
-    const[concernalMenusruation,setConcernalMenusruation]=useState(0);
-    const[recievingUnsterileInjections,setRecievingUnsterileInjections]=useState(0)
+    // ---------genital
+    const[AbnormalMenstruation,setAbnormalMenstruation]=useState(0);
+    const[ContinuousFeelOfUrine,setContinuousFeelOfUrine]=useState(0);
+    const[DarkUrine,setDarkUrine]=useState(0);
+    const[YellowUrine,setYellowUrine]=useState(0);
+    const[Polyuria,setPolyuria]=useState(0);
     function handleChangeGenital(e,i)
     {
-    if(i==="Concernal Menusruation")
+    if(i==="Abnormal Menstruation")
     {
         if(e===true)
         {
-            setConcernalMenusruation(1)
+            setAbnormalMenstruation(1)
         }
         else
         {
-            setConcernalMenusruation(0)
-        }
-    }
-    else if(i==="Recieving Unsterile Injections")
-    {
-        if(e===true)
-        {
-            setRecievingUnsterileInjections(1)
-        }
-        else
-        {
-            setRecievingUnsterileInjections(0)
-        }
-    }
-    }
-
-    // heart
-    const[fastHeartRate,setFastHeartRate]=useState(0);
-    function handleChangeHeart(e,i)
-    {
-    if(i==="Fast Heart Rate")
-    {
-        if(e===true)
-        {
-            setFastHeartRate(1)
-        }
-        else
-        {
-            setFastHeartRate(0)
-        }
-    }
-    }
-
-    // kidney
-    const[polyuria,setPolyuria]=useState(0);
-    const[continuousFeelOfUrine,setContinuousFeelOfUrine]=useState(0)
-    const[spottingUrination,setSpottingUrination]=useState(0);
-    function handleChangeKidney(e,i)
-    {
-    if(i==="Polyuria")
-    {
-        if(e===true)
-        {
-            setPolyuria({"Polyuria":1})
-        }
-        else
-        {
-            setPolyuria({"Polyuria":0})
+            setAbnormalMenstruation(0)
         }
     }
     else if(i==="Continuous Feel Of Urine")
     {
         if(e===true)
         {
-            setContinuousFeelOfUrine({"Continuous Feel Of Urine":1})
+            setContinuousFeelOfUrine(1)
         }
         else
         {
-            setContinuousFeelOfUrine({"Continuous Feel Of Urine":0})
+            setContinuousFeelOfUrine(0)
         }
     }
-    else if(i==="Spotting Urination")
+    else if(i==="Dark Urine")
     {
         if(e===true)
         {
-            setSpottingUrination({"Spotting Urination":1})
+            setDarkUrine(1)
         }
         else
         {
-            setSpottingUrination({"Spotting Urination":0})
+            setDarkUrine(0)
+        }
+    }
+    else if(i==="Yellow Urine")
+    {
+        if(e===true)
+        {
+            setYellowUrine(1)
+        }
+        else
+        {
+            setYellowUrine(0)
+        }
+    }
+    else if(i==="Polyuria")
+    {
+        if(e===true)
+        {
+            setPolyuria(1)
+        }
+        else
+        {
+            setPolyuria(0)
         }
     }
     }
 
-    // lung
-    const[throatIrritation,setThroatIrritation]=useState(0);
-    const[bloodInSputum,setBloodInSputum]=useState(0)
-    function handleChangeLung(e,i)
+    // ------------------Eyes
+    const[RednessOfEyes,setRednessOfEyes]=useState(0);
+    const[WateringFromEyes,setWateringFromEyes]=useState(0);
+    function handleChangeEyes(e,i)
     {
-    if(i==="Throat Irritation")
+    if(i==="Redness Of Eyes")
     {
         if(e===true)
         {
-            setThroatIrritation(1)
+            setRednessOfEyes(1)
         }
         else
         {
-            setThroatIrritation(0)
+            setRednessOfEyes(0)
         }
     }
-    else if(i==="Blood in Sputum")
+    if(i==="Watering From Eyes")
     {
         if(e===true)
         {
-            setBloodInSputum(1)
+            setWateringFromEyes(1)
         }
         else
         {
-            setBloodInSputum(0)
+            setWateringFromEyes(0)
         }
     }
     }
 
-    // oral
-    const[ulcerOnTongue,setUlcerOnTongue]=useState(0);
-    const[patchesInThroat,setPatchesInThroat]=useState(0)
-    const[slurredSpeech,setSlurredSpeech]=useState(0);
-    function handleChangeOral(e,i)
+    // ---------leg
+    const[SwollenLegs,setSwollenLegs]=useState(0);
+    const[ProminentVeinsOnCalf,setProminentVeinsOnCalf]=useState(0)
+    function handleChangeLegs(e,i)
     {
-    if(i==="Ulcer On Tongue")
+    if(i==="Swollen Legs")
     {
         if(e===true)
         {
-            setUlcerOnTongue(1)
+            setSwollenLegs(1)
         }
         else
         {
-            setUlcerOnTongue(0)
+            setSwollenLegs(0)
+        }
+    }
+    else if(i==="Prominent Veins On Calf")
+    {
+        if(e===true)
+        {
+            setProminentVeinsOnCalf(1)
+        }
+        else
+        {
+            setProminentVeinsOnCalf(0)
+        }
+    }
+    }
+
+    // -----------mouth
+    const[Cough,setCough]=useState(0);
+    const[UlcersOnTongue,setUlcersOnTongue]=useState(0)
+    const[PatchesInThroat,setPatchesInThroat]=useState(0);
+    const[SlurredSpeech,setSlurredSpeech]=useState(0);
+    function handleChangeMouth(e,i)
+    {
+    if(i==="Cough")
+    {
+        if(e===true)
+        {
+            setCough(1)
+        }
+        else
+        {
+            setCough(0)
+        }
+    }
+    else if(i==="Ulcers On Tongue")
+    {
+        if(e===true)
+        {
+            setUlcersOnTongue(1)
+        }
+        else
+        {
+            setUlcersOnTongue(0)
         }
     }
     else if(i==="Patches In Throat")
@@ -322,56 +436,32 @@ const Info = (props) =>
     }
     }
 
-    // pain
-    const[musclePain,setMusclePain]=useState(0);
-    const[backPain,setBackPain]=useState(0)
-    const[neckPain,setNeckPain]=useState(0);
-    const[hibJointPain,setHibJointPain]=useState(0)
-    const[bellyPain,setBellyPain]=useState(0);
+    // ----------------pain
+    const[PainfulWalking,setPainfulWalking]=useState(0);
+    const[BellyPain,setBellyPain]=useState(0)
+    const[MusclePain,setMusclePain]=useState(0);
+    const[HipJointPain,setHipJointPain]=useState(0)
+    const[KneePain,setKneePain]=useState(0);
+    const[NeckPain,setNeckPain]=useState(0);
+    const[PainInAnalRegion,setPainInAnalRegion]=useState(0)
+    const[PainDuringBowelMovements,setPainDuringBowelMovements]=useState(0);
+    const[ChestPain,setChestPain]=useState(0)
+    const[AbdominalPain,setAbdominalPain]=useState(0);
+    const[BackPain,setBackPain]=useState(0);
+    const[PainBehindTheEyes,setPainBehindTheEyes]=useState(0)
+    const[StomachPain,setStomachPain]=useState(0);
+    const[JointPain,setJointPain]=useState(0);
     function handleChangePain(e,i)
     {
-    if(i==="Muscle Pain")
+    if(i==="Painful Walking")
     {
         if(e===true)
         {
-            setMusclePain(1)
+            setPainfulWalking(1)
         }
         else
         {
-            setMusclePain(0)
-        }
-    }
-    else if(i==="Back Pain")
-    {
-        if(e===true)
-        {
-            setBackPain(1)
-        }
-        else
-        {
-            setBackPain(0)
-        }
-    }
-    else if(i==="Neck Pain")
-    {
-        if(e===true)
-        {
-            setNeckPain(1)
-        }
-        else
-        {
-            setNeckPain(0)
-        }
-    }
-    else if(i==="Hib Joint Pain")
-    {
-        if(e===true)
-        {
-            setHibJointPain(1)
-        }
-        else
-        {
-            setHibJointPain(0)
+            setPainfulWalking(0)
         }
     }
     else if(i==="Belly Pain")
@@ -385,36 +475,168 @@ const Info = (props) =>
             setBellyPain(0)
         }
     }
+    else if(i==="Muscle Pain")
+    {
+        if(e===true)
+        {
+            setMusclePain(1)
+        }
+        else
+        {
+            setMusclePain(0)
+        }
+    }
+    else if(i==="Hip Joint Pain")
+    {
+        if(e===true)
+        {
+            setHipJointPain(1)
+        }
+        else
+        {
+            setHipJointPain(0)
+        }
+    }
+    else if(i==="Knee Pain")
+    {
+        if(e===true)
+        {
+            setKneePain(1)
+        }
+        else
+        {
+            setKneePain(0)
+        }
+    }
+    else if(i==="Neck Pain")
+    {
+        if(e===true)
+        {
+            setNeckPain(1)
+        }
+        else
+        {
+            setNeckPain(0)
+        }
+    }
+    else if(i==="Pain In Anal Region")
+    {
+        if(e===true)
+        {
+            setPainInAnalRegion(1)
+        }
+        else
+        {
+            setPainInAnalRegion(0)
+        }
+    }
+    else if(i==="Pain During Bowel Movements")
+    {
+        if(e===true)
+        {
+            setPainDuringBowelMovements(1)
+        }
+        else
+        {
+            setPainDuringBowelMovements(0)
+        }
+    }
+    else if(i==="Chest Pain")
+    {
+        if(e===true)
+        {
+            setChestPain(1)
+        }
+        else
+        {
+            setChestPain(0)
+        }
+    }
+    else if(i==="Abdominal Pain")
+    {
+        if(e===true)
+        {
+            setAbdominalPain(1)
+        }
+        else
+        {
+            setAbdominalPain(0)
+        }
+    }
+    else if(i==="Back Pain")
+    {
+        if(e===true)
+        {
+            setBackPain(1)
+        }
+        else
+        {
+            setBackPain(0)
+        }
+    }
+    else if(i==="Pain Behind The Eyes")
+    {
+        if(e===true)
+        {
+            setPainBehindTheEyes(1)
+        }
+        else
+        {
+            setPainBehindTheEyes(0)
+        }
+    }
+    else if(i==="Stomach Pain")
+    {
+        if(e===true)
+        {
+            setStomachPain(1)
+        }
+        else
+        {
+            setStomachPain(0)
+        }
+    }
+    else if(i==="Joint Pain")
+    {
+        if(e===true)
+        {
+            setJointPain(1)
+        }
+        else
+        {
+            setJointPain(0)
+        }
+    }
     }
 
-    // skin
-    const[interalItching,setInteralItching]=useState(0);
-    const[deschronicPatch,setDeschronicPatch]=useState(0)
+    // --------skin
+    const[Blackheads,setBlackheads]=useState(0);
+    const[SkinRash,setSkinRash]=useState(0)
     const[Itching,setItching]=useState(0);
-    const[pusFilledPimples,setPusFilledPimples]=useState(0)
-    const[silverLikeDusting,setSilverLikeDusting]=useState(0);
+    const[InternalItching,setInternalItching]=useState(0)
+    const[SkinPeeling,setSkinPeeling]=useState(0);
     function handleChangeSkin(e,i)
     {
-    if(i==="Interal Itching")
+    if(i==="Blackheads")
     {
         if(e===true)
         {
-            setInteralItching(1)
+            setBlackheads(1)
         }
         else
         {
-            setInteralItching(0)
+            setBlackheads(0)
         }
     }
-    else if(i==="Deschronic Patch")
+    else if(i==="Skin Rash")
     {
         if(e===true)
         {
-            setDeschronicPatch(1)
+            setSkinRash(1)
         }
         else
         {
-            setDeschronicPatch(0)
+            setSkinRash(0)
         }
     }
     else if(i==="Itching")
@@ -428,40 +650,62 @@ const Info = (props) =>
             setItching(0)
         }
     }
-    else if(i==="Pus Filled Pimples")
+    else if(i==="Internal Itching")
     {
         if(e===true)
         {
-            setPusFilledPimples(1)
+            setInternalItching(1)
         }
         else
         {
-            setPusFilledPimples(0)
+            setInternalItching(0)
         }
     }
-    else if(i==="Silver Like Dusting")
+    else if(i==="Skin Peeling")
     {
         if(e===true)
         {
-            setSilverLikeDusting(1)
+            setSkinPeeling(1)
         }
         else
         {
-            setSilverLikeDusting(0)
+            setSkinPeeling(0)
         }
     }
     }
 
 
-    // stomach
+    // ------------stomach
+    const[SwellingOfStomach,setSwellingOfStomach]=useState(0);
+    const[Indigestion,setIndigestion]=useState(0)
     const[Diarrhoea,setDiarrhoea]=useState(0);
-    const[Consitpation,setConsitpation]=useState(0)
-    const[stomachBleeding,setStomachBleeding]=useState(0);
-    const[yellowingEyes,setYellowingEyes]=useState(0)
-    const[Nausea,setNausea]=useState(0);
+    const[Constipation,setConstipation]=useState(0)
+    const[StomachBleeding,setStomachBleeding]=useState(0);
     function handleChangeStomach(e,i)
     {
-    if(i==="Diarrhoea")
+    if(i==="Swelling Of Stomach")
+    {
+        if(e===true)
+        {
+            setSwellingOfStomach(1)
+        }
+        else
+        {
+            setSwellingOfStomach(0)
+        }
+    }
+    else if(i==="Indigestion")
+    {
+        if(e===true)
+        {
+            setIndigestion(1)
+        }
+        else
+        {
+            setIndigestion(0)
+        }
+    }
+    else if(i==="Diarrhoea")
     {
         if(e===true)
         {
@@ -472,15 +716,15 @@ const Info = (props) =>
             setDiarrhoea(0)
         }
     }
-    else if(i==="Consitpation")
+    else if(i==="Constipation")
     {
         if(e===true)
         {
-            setConsitpation(1)
+            setConstipation(1)
         }
         else
         {
-            setConsitpation(0)
+            setConstipation(0)
         }
     }
     else if(i==="Stomach Bleeding")
@@ -492,28 +736,6 @@ const Info = (props) =>
         else
         {
             setStomachBleeding(0)
-        }
-    }
-    else if(i==="Yellowing Eyes")
-    {
-        if(e===true)
-        {
-            setYellowingEyes(1)
-        }
-        else
-        {
-            setYellowingEyes(0)
-        }
-    }
-    else if(i==="Nausea")
-    {
-        if(e===true)
-        {
-            setNausea(1)
-        }
-        else
-        {
-            setNausea(0)
         }
     }
     }
@@ -534,16 +756,22 @@ const Info = (props) =>
     {
         var ans="";
         var li=[]
-        var lis=[mildFever,weightLoss,wateringEyes,sweating,swollenExtremities,depression,alteredSensorium,lackOfConcentration,unsteadiness,
-            concernalMenusruation,recievingUnsterileInjections,fastHeartRate,polyuria,continuousFeelOfUrine,spottingUrination,throatIrritation,
-            bloodInSputum,ulcerOnTongue,patchesInThroat,slurredSpeech,musclePain,backPain,neckPain,hibJointPain,bellyPain,interalItching,
-            deschronicPatch,Itching,pusFilledPimples,silverLikeDusting,Diarrhoea,Consitpation,stomachBleeding,yellowingEyes,Nausea]
-        var lis1=["Mild Fever","Weight Loss","Watering Eyes","Sweating","Swallen Extremities","Depression","Altered Sensorium","Lack Of Concentration",
-            "Unsteadiness","Concernal Menusruation","Recieving Unsterile Injections","Fast Heart Rate","Polyuria","Continuous Feel Of Urine",
-            "Spotting Urination","Throat Irritation","Blood In Sputum","Ulcer On Tongue","Patches In Throat","Slurred Speech","Muscle Pain","Back Pain",
-            "Neck Pain","Hib Joint Pain","Belly Pain","Interal Itching","Deschronic Patch","Itching","Pus Filled Pimples","Silver Like Dusting","Diarrhoea",
-            "Consitpation","Stomach Bleeding","Yellowing Eyes","Nausea"]
-        for(var i=0;i<35;i++)
+        var lis=[LossOfAppetite, LossOfBalance, LossOfSmell, WeightGain, WeightLoss, 
+            MuscleWeakness, HighFever, MildFever, ColdHandsAndFeets, ThroatIrritation, FastHeartRate, Sweating
+            ,PainfulWalking, BellyPain, MusclePain, HipJointPain, KneePain, NeckPain, 
+            PainInAnalRegion, PainDuringBowelMovements, ChestPain, AbdominalPain, BackPain, PainBehindTheEyes, StomachPain, JointPain
+            ,RednessOfEyes, WateringFromEyes,SwellingOfStomach, Indigestion, Diarrhoea, 
+            Constipation, StomachBleeding,Cough, UlcersOnTongue, PatchesInThroat, SlurredSpeech
+            ,Anxiety, Depression, AlteredSensorium, LackOfConcentration, Unsteadiness,
+            AbnormalMenstruation, ContinuousFeelOfUrine, DarkUrine, YellowUrine, Polyuria,Blackheads, 
+            SkinRash, Itching, InternalItching, SkinPeeling,
+            SwollenLegs, ProminentVeinsOnCalf]
+        var lis1=["Loss Of Appetite", "Loss Of Balance", "Loss Of Smell", "Weight Gain", "Weight Loss", "Muscle Weakness", "High Fever", "Mild Fever", "Cold Hands And Feets", "Throat Irritation", "Fast Heart Rate", "Sweating",
+        "Painful Walking", "Belly Pain", "Muscle Pain", "Hip Joint Pain", "Knee Pain", "Neck Pain", "Pain In Anal Region", "Pain During Bowel Movements", "Chest Pain", "Abdominal Pain", "Back Pain", "Pain Behind The Eyes",
+        "Stomach Pain", "Joint Pain","Redness Of Eyes", "Watering From Eyes","Swelling Of Stomach", "Indigestion", "Diarrhoea", "Constipation", "Stomach Bleeding","Cough", "Ulcers On Tongue", "Patches In Throat", "Slurred Speech",
+        "Anxiety", "Depression", "Altered Sensorium", "Lack Of Concentration", "Unsteadiness","Abnormal Menstruation", "Continuous Feel Of Urine", "Dark Urine", "Yellow Urine", "Polyuria","Blackheads", "Skin Rash", "Itching", 
+        "Internal Itching", "Skin Peeling","Swollen Legs", "Prominent Veins On Calf"]
+        for(var i=0;i<54;i++)
         {
             if(lis[i]==1)
             {
@@ -605,7 +833,7 @@ const Info = (props) =>
         <div class="section-center">
           <article class="question">
               <div class="question-title">
-                  <p>Do you have <span style={{color:"red"}}>Common Disease</span>? if yes then select from given options.</p>
+                  <p>Do you have <span style={{color:"red"}}>Body Related Issues</span>? if yes then select from given options.</p>
                   <button type="button" class="question-btn">
                       <span class="plus-icon"  style={{display:change.button11}} onClick={()=>{setChange({text1:"block",button11:"none",button12:"block"})}}>
                           <i class="far fa-plus-square"></i>
@@ -617,7 +845,7 @@ const Info = (props) =>
               </div>
               <div class="question-text" style={{display:change.text1}}>
                   <p>
-                    <CommonDisease handleChangeCommon={handleChangeCommon}/>
+                    <BodyDisease handleChangeBody={handleChangeBody}/>
                   </p>
               </div>
           </article>
@@ -625,7 +853,7 @@ const Info = (props) =>
         <div class="section-center">
           <article class="question">
               <div class="question-title">
-                  <p>Do you have <span style={{color:"red"}}>Skin Disease</span>? if yes then select from given options.</p>
+                  <p>Do you have <span style={{color:"red"}}>Skin Related Issues</span>? if yes then select from given options.</p>
                   <button type="button" class="question-btn">
                       <span class="plus-icon"  style={{display:change.button21}} onClick={()=>{setChange({text2:"block",button21:"none",button22:"block"})}}>
                           <i class="far fa-plus-square"></i>
@@ -645,7 +873,7 @@ const Info = (props) =>
         <div class="section-center">
           <article class="question">
               <div class="question-title">
-                  <p>Do you have <span style={{color:"red"}}>Lungs Disease</span>? if yes then select from given options.</p>
+                  <p>Do you have <span style={{color:"red"}}>Leg Related Issues</span>? if yes then select from given options.</p>
                   <button type="button" class="question-btn">
                       <span class="plus-icon"  style={{display:change.button31}} onClick={()=>{setChange({text3:"block",button31:"none",button32:"block"})}}>
                           <i class="far fa-plus-square"></i>
@@ -657,7 +885,7 @@ const Info = (props) =>
               </div>
               <div class="question-text" style={{display:change.text3}}>
                   <p>
-                    <LungDisease handleChangeLung={handleChangeLung}/>
+                    <LegDisease handleChangeLegs={handleChangeLegs}/>
                   </p>
               </div>
           </article>
@@ -665,7 +893,7 @@ const Info = (props) =>
         <div class="section-center">
           <article class="question">
               <div class="question-title">
-                  <p>Do you have <span style={{color:"red"}}>Pain Disease</span>? if yes then select from given options.</p>
+                  <p>Do you have <span style={{color:"red"}}>Pain Related Issues</span>? if yes then select from given options.</p>
                   <button type="button" class="question-btn">
                       <span class="plus-icon"  style={{display:change.button41}} onClick={()=>{setChange({text4:"block",button41:"none",button42:"block"})}}>
                           <i class="far fa-plus-square"></i>
@@ -685,7 +913,7 @@ const Info = (props) =>
         <div class="section-center">
           <article class="question">
               <div class="question-title">
-                  <p>Do you have <span style={{color:"red"}}>Genital Disease</span>? if yes then select from given options.</p>
+                  <p>Do you have <span style={{color:"red"}}>Genital Related Issues</span>? if yes then select from given options.</p>
                   <button type="button" class="question-btn">
                       <span class="plus-icon"  style={{display:change.button51}} onClick={()=>{setChange({text5:"block",button51:"none",button52:"block"})}}>
                           <i class="far fa-plus-square"></i>
@@ -705,27 +933,7 @@ const Info = (props) =>
         <div class="section-center">
           <article class="question">
               <div class="question-title">
-                  <p>Do you have <span style={{color:"red"}}>Kidney Disease</span>? if yes then select from given options.</p>
-                  <button type="button" class="question-btn">
-                      <span class="plus-icon"  style={{display:change.button61}} onClick={()=>{setChange({text6:"block",button61:"none",button62:"block"})}}>
-                          <i class="far fa-plus-square"></i>
-                      </span>
-                      <span class="minus-icon" style={{display:change.button62}} onClick={()=>{setChange({text6:"none",button61:"block",button62:"none"})}}>
-                          <i class="far fa-minus-square"></i>
-                      </span>
-                  </button>
-              </div>
-              <div class="question-text" style={{display:change.text6}}>
-                  <p>
-                    <KidneyDisease handleChangeKidney={handleChangeKidney}/>
-                  </p>
-              </div>
-          </article>
-        </div>
-        <div class="section-center">
-          <article class="question">
-              <div class="question-title">
-                  <p>Do you have <span style={{color:"red"}}>Stomch Disease</span>? if yes then select from given options.</p>
+                  <p>Do you have <span style={{color:"red"}}>Stomch Related Issues</span>? if yes then select from given options.</p>
                   <button type="button" class="question-btn">
                       <span class="plus-icon"  style={{display:change.button71}} onClick={()=>{setChange({text7:"block",button71:"none",button72:"block"})}}>
                           <i class="far fa-plus-square"></i>
@@ -745,7 +953,7 @@ const Info = (props) =>
         <div class="section-center">
           <article class="question">
               <div class="question-title">
-                  <p>Do you have <span style={{color:"red"}}>Heart Disease</span>? if yes then select from given options.</p>
+                  <p>Do you have <span style={{color:"red"}}>Heart Related Issues</span>? if yes then select from given options.</p>
                   <button type="button" class="question-btn">
                       <span class="plus-icon"  style={{display:change.button81}} onClick={()=>{setChange({text8:"block",button81:"none",button82:"block"})}}>
                           <i class="far fa-plus-square"></i>
@@ -757,7 +965,7 @@ const Info = (props) =>
               </div>
               <div class="question-text" style={{display:change.text8}}>
                   <p>
-                    <HeartDisease handleChangeHeart={handleChangeHeart}/>
+                    <EyeDisease handleChangeEyes={handleChangeEyes}/>
                   </p>
               </div>
           </article>
@@ -765,7 +973,7 @@ const Info = (props) =>
         <div class="section-center">
           <article class="question">
               <div class="question-title">
-                  <p>Do you have <span style={{color:"red"}}>Oral Disease</span>? if yes then select from given options.</p>
+                  <p>Do you have <span style={{color:"red"}}>Mouth Related Issues</span>? if yes then select from given options.</p>
                   <button type="button" class="question-btn">
                       <span class="plus-icon"  style={{display:change.button91}} onClick={()=>{setChange({text9:"block",button91:"none",button92:"block"})}}>
                           <i class="far fa-plus-square"></i>
@@ -777,7 +985,7 @@ const Info = (props) =>
               </div>
               <div class="question-text" style={{display:change.text9}}>
                   <p>
-                    <OralDisease handleChangeOral={handleChangeOral}/>
+                    <MouthDisease handleChangeMouth={handleChangeMouth}/>
                   </p>
               </div>
           </article>
@@ -785,7 +993,7 @@ const Info = (props) =>
         <div class="section-center">
           <article class="question">
               <div class="question-title">
-                  <p>Do you have <span style={{color:"red"}}>Brain Disease</span>? if yes then select from given options.</p>
+                  <p>Do you have <span style={{color:"red"}}>Brain Related Issues</span>? if yes then select from given options.</p>
                   <button type="button" class="question-btn">
                       <span class="plus-icon"  style={{display:change.button101}} onClick={()=>{setChange({text10:"block",button101:"none",button102:"block"})}}>
                           <i class="far fa-plus-square"></i>
@@ -822,9 +1030,6 @@ const Info = (props) =>
             <div className='info-button' onClick={()=>{handleSubmit()}}>
                 Result
             </div>
-        </div>
-        <div class="info-button-outer">
-            {m1}{m2}{m3}{m4}
         </div>
         
     </div>

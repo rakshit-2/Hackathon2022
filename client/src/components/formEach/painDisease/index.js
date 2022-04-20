@@ -4,11 +4,20 @@ const PainDisease = (props) =>
 {
     const[user,setUser]=useState([])
     const userData=[
+    {name:"Painful Walking"},
+    {name:"Belly Pain"},
     {name:"Muscle Pain"},
-    {name:"Back Pain"},
+    {name:"Hip Joint Pain"},
+    {name:"Knee Pain"},
     {name:"Neck Pain"},
-    {name:"Hib Joint Pain"},
-    {name:"Belly Pain"},]
+    {name:"Pain In Anal Region"},
+    {name:"Pain During Bowel Movements"},
+    {name:"Chest Pain"},
+    {name:"Abdominal Pain"},
+    {name:"Back Pain"},
+    {name:"Pain Behind The Eyes"},
+    {name:"Stomach Pain"},
+    {name:"Joint Pain"},]
 
     useEffect(()=>{
     setUser(userData);

@@ -4,6 +4,7 @@ const BrainDisease = (props) =>
 {
     const[user,setUser]=useState([])
     const userData=[
+    {name:"Anxiety"},
     {name:"Depression"},
     {name:"Altered Sensorium"},
     {name:"Lack Of Concentration"},

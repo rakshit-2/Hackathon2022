@@ -4,8 +4,11 @@ const GenitalDisease = (props) =>
 {
     const[user,setUser]=useState([])
     const userData=[
-    {name:"Concernal Menusruation"},
-    {name:"Recieving Unsterile Injections"},]
+    {name:"Abnormal Menstruation"},
+    {name:"Continuous Feel Of Urine"},
+    {name:"Dark Urine"},
+    {name:"Yellow Urine"},
+    {name:"Polyuria"},]
     
     useEffect(()=>{
     setUser(userData);

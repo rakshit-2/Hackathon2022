@@ -4,11 +4,11 @@ const SkinDisease = (props) =>
 {
     const[user,setUser]=useState([])
     const userData=[
-    {name:"Interal Itching"},
-    {name:"Deschronic Patch"},
+    {name:"Blackheads"},
+    {name:"Skin Rash"},
     {name:"Itching"},
-    {name:"Pus Filled Pimples"},
-    {name:"Silver Like Dusting"},]
+    {name:"Internal Itching"},
+    {name:"Skin Peeling"},]
 
     useEffect(()=>{
     setUser(userData);
