@@ -12,10 +12,27 @@ import StomachDisease from './../formEach/stomachDisease/index';
 import HeartDisease from './../formEach/heartDisease/index';
 import OralDisease from './../formEach/oralDisease/index';
 import BrainDisease from './../formEach/brainDisease/index';
+import Axios from 'axios';
+
+
+
+
+
+
+
+// Uncomment this : to check : if python file is not working fine....
+// childPython.on('close', (code) => {
+//     console.log(`child process excited with code ${code}`);
+// });
+
+
+
+
+
+
 const Info = (props) => 
 {
 
-    
 
     const[change,setChange]=useState({
         text1:'none',button11:'block',button12:'none',
@@ -504,7 +521,7 @@ const Info = (props) =>
 
     const[displayModaleError,setDisplayModaleError]=useState("none")
     const[displayModaleSuccess,setDisplayModaleSuccess]=useState("none")
-    
+    const[ansString,setAnsString]=useState("")
     
     function handleSubmit()
     {
@@ -537,10 +554,17 @@ const Info = (props) =>
             setDisplayModaleError("none")
             for(var i=0;i<len-1;i++)
             {
-                ans=ans+li[i]+", "
+                ans=ans+li[i]+","
             }
             ans=ans+li[len-1];
-            console.log(ans)
+            Axios.get('http://localhost:3001/result',
+            {
+                params:{
+                    ans:ans,
+                  }
+            }).then((res)=>{
+                console.log(res);
+            });
         }
     }
 

@@ -20,11 +20,26 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 
 
-const check= spawn('python',['test.py','Rakshit','Sharma']);
-
-check.stdout.on('data',(data)=>{
-    console.log(`${data}`)
+app.get('/result',(req,res)=>{
+    let data1;
+    const check= spawn('python',['test.py',req.query.ans]);
+    check.stdout.on('data', function (data) {
+        console.log('Pipe data from python script ...');
+        data1 = data.toString();
+     });
+     check.on('close', (code) => {
+        console.log(`child process close all stdio with code ${code}`);
+        res.send(data1)
+     });
 })
+
+
+
+
+
+
+
+
 
 app.get('/get/login',(req,res)=>{
     var email=req.query.email;
