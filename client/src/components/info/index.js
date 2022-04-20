@@ -746,10 +746,10 @@ const Info = (props) =>
     const[ansString,setAnsString]=useState("")
     
 
-    const[m1,setM1]=useState("")
-    const[m2,setM2]=useState("")
-    const[m3,setM3]=useState("")
-    const[m4,setM4]=useState("")
+    // const[m1,setM1]=useState("")
+    // const[m2,setM2]=useState("")
+    // const[m3,setM3]=useState("")
+    // const[m4,setM4]=useState("")
 
 
     function handleSubmit()
@@ -814,10 +814,10 @@ const Info = (props) =>
                     
                 }
                 l.push(word);
-                setM1(l[0]);
-                setM2(l[1]);
-                setM3(l[2]);
-                setM4(l[3]);
+                props.getChangeState(l);
+                props.getChangeState(l);
+                props.getChangeState(l);
+                props.getChangeState(l);
             });
         }
     }
