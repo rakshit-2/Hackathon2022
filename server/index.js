@@ -63,7 +63,18 @@ app.post('/insert/signup',(req,res)=>{
     
 })
 
-
+app.post('/profile',(req,res)=>{
+    var name=req.body.name;
+    var email=req.body.email;
+    var age=req.body.age;
+    var phone=req.body.phone;
+    var address=req.body.address;
+    var pincode=req.body.pincode;
+    const ele1="UPDATE baymax SET name = ?, age = ?,phone = ?, location = ? WHERE email=?;";
+    db.query(ele1,[name,age,phone,address,email],(err,result)=>{
+        console.log(result);
+    })
+})
 
 
 

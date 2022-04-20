@@ -2,6 +2,9 @@ import React from 'react';
 import './index.css';
 import { useHistory } from 'react-router';
 import { useState } from 'react';
+import Axios from 'axios';
+
+
 const Profile = (props) => 
 {
 
@@ -14,7 +17,19 @@ const Profile = (props) =>
   const[pincode,setPincode]=useState(0);
 
 
-
+  function handleSubmit()
+  {
+    Axios.post('http://localhost:3001/profile',
+    {
+      name:name,
+      email:email,
+      age:age,
+      phone:phone,
+      address:address,
+    }).then((res)=>{
+      console.log(res);
+    });
+  }
   return (
     <>
     <div className='profile-outermost'>
@@ -75,7 +90,7 @@ const Profile = (props) =>
               
           </div> */}
           <div className='profile-button'>
-            <button className='profile-button-inner' type='button' value='save'> SAVE</button>
+            <button onClick={()=>{handleSubmit()}} className='profile-button-inner' type='button' value='save'> SAVE</button>
           </div>
         </form>
       </div>
