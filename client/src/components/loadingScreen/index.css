@@ -21,14 +21,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 40px;
+    width: 60px;
     flex-direction: row;
 }
 
 .bar {
     background-color: #D97D9C;
-    height: 70px;
-    width: 10px;
+    height: 120px;
+    width: 30px;
     display: block;
     animation: increase 1s ease-in-out infinite;
 }
@@ -46,10 +46,10 @@
 @keyframes increase {
     0%,
     100% {
-        transform: scaleY(1);
+        transform: scaleY(1.2);
     }
 
     50% {
-        transform: scaleY(0.6);
+        transform: scaleY(0.5);
     }
 }
