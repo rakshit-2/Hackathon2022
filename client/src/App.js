@@ -15,10 +15,7 @@ const App = (props) =>
 {
 
 
-  const[m1,setM1]=useState("")
-  const[m2,setM2]=useState("")
-  const[m3,setM3]=useState("")
-  const[m4,setM4]=useState("")
+  
 
   const[mainDisplayChange,setMainDisplayChange]=useState({
                                                     auth:"none",
@@ -31,13 +28,7 @@ const App = (props) =>
   })
 
 
-  function getChangeState(a)
-  {
-    setM1(a[0]);
-    setM2(a[1]);
-    setM3(a[2]);
-    setM4(a[3]);
-  }
+
 
   function sidepanelClose()
   {
@@ -154,12 +145,12 @@ const App = (props) =>
             </div>
             <div className='outer-info' style={{display:mainDisplayChange.info}}>
                 <div className='inner-info'>
-                    <Info getChangeState={getChangeState}/>
+                    <Info/>
                 </div>
             </div>
             <div className='outer-result' style={{display:mainDisplayChange.result}}>
                 <div className='inner-result'>
-                    <Result m1={m1} m2={m2} m3={m3} m4={m4}/>
+                    <Result/>
                 </div>
             </div>
             <div className='outer-remedies' style={{display:mainDisplayChange.remedies}}>
