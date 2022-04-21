@@ -81,8 +81,8 @@ body{
 
 
 .outer-home{
-    weight:100%;
-    height:55.6rem;
+    width:100%;
+    height:100vh;
 }
 .navbar
 {
@@ -112,7 +112,7 @@ body{
 
 .sidepanel{
     width:100%;
-    height:55.6rem;
+    height:100vh;
     position:absolute;
     z-index: 20;
 }
@@ -120,7 +120,7 @@ body{
 
 .section-outer{
     width:100%;
-    height:49.6rem;
+    height:89vh;
     background: var(--clr-grey-10);
     
 }
@@ -137,8 +137,8 @@ body{
 
 
 .outer-auth{
-    weight:100%;
-    height:49.6rem;
+    width:100%;
+    height:89vh;
     background: var(--clr-grey-10);
 }
 .inner-auth{
@@ -152,8 +152,8 @@ body{
 
 
 .outer-profile{
-    weight:100%;
-    height:49.6rem;
+    width:100%;
+    height:89vh;
     background: var(--clr-grey-10);
 }
 .inner-profile{
@@ -164,8 +164,8 @@ body{
 
 
 .outer-info{
-    weight:100%;
-    height:49.6rem;
+    width:100%;
+    height:89vh;
     background: var(--clr-grey-10);
 }
 .inner-info{
@@ -175,8 +175,8 @@ body{
 }
 
 .outer-result{
-    weight:100%;
-    height:49.6rem;
+    width:100%;
+    height:89vh;
     background: var(--clr-grey-10);
 }
 .inner-result{
@@ -186,11 +186,18 @@ body{
 
 
 .outer-remedies{
-    weight:100%;
-    height:49.6rem;
+    width:100%;
+    height:89vh;
     background: var(--clr-grey-10);
 }
 .inner-remedies{
     width:100%;
     height:100%;
 }
+
+
+
+/* @media only screen and (min-width: 1030px) and (max-width: 1366px)  
+{
+    
+} */
