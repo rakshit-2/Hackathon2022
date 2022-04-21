@@ -72,14 +72,6 @@ const App = (props) =>
     {
     setMainDisplayChange({home:'none',auth:"none",profile:"none",info:"block",result:"none",sidepanel:"none",remedies:"none"})
     }
-    else if(mainDisplayChange.result==='block')
-    {
-    setMainDisplayChange({home:'none',auth:"none",profile:"none",info:"none",result:"block",sidepanel:"none",remedies:"none"})
-    }
-    else if(mainDisplayChange.remedies==='block')
-    {
-    setMainDisplayChange({home:'none',auth:"none",profile:"none",info:"none",result:"none",sidepanel:"none",remedies:"block"})
-    }
   }
 
   function loginOpen()
@@ -106,14 +98,6 @@ const App = (props) =>
   {
     setMainDisplayChange({home:'none',auth:"none",profile:"none",info:"block",result:"none",sidepanel:"none",remedies:"none"})
   }
-  function resultOpen()
-  {
-    setMainDisplayChange({home:'none',auth:"none",profile:"none",info:"none",result:"block",sidepanel:"none",remedies:"none"})
-  }
-  function remediesOpen()
-  {
-    setMainDisplayChange({home:'none',auth:"none",profile:"none",info:"none",result:"none",sidepanel:"none",remedies:"block"})
-  }
 
   function check()
   {
@@ -133,14 +117,6 @@ const App = (props) =>
       {
         setMainDisplayChange({home:'none',auth:"none",profile:"none",info:"block",result:"none",sidepanel:"block",remedies:"none"})
       }
-      else if(mainDisplayChange.result==='block')
-      {
-        setMainDisplayChange({home:'none',auth:"none",profile:"none",info:"none",result:"block",sidepanel:"block",remedies:"none"})
-      }
-      else if(mainDisplayChange.remedies==='block')
-      {
-        setMainDisplayChange({home:'none',auth:"none",profile:"none",info:"none",result:"none",sidepanel:"block",remedies:"block"})
-      }
   }
   return (
     <>
@@ -151,8 +127,6 @@ const App = (props) =>
                             homeOpen={homeOpen}
                             profileOpen={profileOpen}
                             infoOpen={infoOpen}
-                            resultOpen={resultOpen}
-                            remediesOpen={remediesOpen}
                 />
             </div>
             <div className='navbar'>

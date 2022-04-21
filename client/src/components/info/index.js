@@ -1014,6 +1014,10 @@ const Info = (props) =>
     const[info2,setInfo2]=useState("")
     const[info3,setInfo3]=useState("")
     const[info4,setInfo4]=useState("")
+    const[rem1,setRem1]=useState("")
+    const[rem2,setRem2]=useState("")
+    const[rem3,setRem3]=useState("")
+    const[rem4,setRem4]=useState("")
 
     function handleSubmit()
     {
@@ -1085,6 +1089,7 @@ const Info = (props) =>
                     if(val[i].diseaseName===String(l[0]))
                     {
                     setInfo1(val[i].diseaseInfo);
+                    setRem1(val[i].diseaseRem);
                     break;
                     }
                 }
@@ -1093,6 +1098,7 @@ const Info = (props) =>
                     if(val[i].diseaseName===String(l[1]))
                     {
                     setInfo2(val[i].diseaseInfo);
+                    setRem2(val[i].diseaseRem);
                     break;
                     }
                 }
@@ -1101,6 +1107,7 @@ const Info = (props) =>
                     if(val[i].diseaseName===String(l[2]))
                     {
                     setInfo3(val[i].diseaseInfo);
+                    setRem3(val[i].diseaseRem);
                     break;
                     }
                 }
@@ -1109,6 +1116,7 @@ const Info = (props) =>
                     if(val[i].diseaseName===String(l[3]))
                     {
                     setInfo4(val[i].diseaseInfo);
+                    setRem4(val[i].diseaseRem);
                     break;
                     }
                 }
@@ -1341,34 +1349,74 @@ const Info = (props) =>
                 <div class="result-inner" style={{display:resultDisplay}}>
                     <div className='result-major'>
                         <div className='result-major-left'>
-                            {m1}
+                            <div className='result-major-left-up'>
+                                Most Accurate Model
+                            </div>
+                            <div className='result-major-left-bottom'>
+                                {m1}
+                            </div>
                         </div>
                         <div className='result-major-right'>
-                            {info1}
+                            <div className='result-major-right-up'>
+                                <span style={{color:"red"}}>Info{'\u00A0'}{'\u00A0'}</span>{info1}
+                            </div>
+                            <div className='result-major-right-down'>
+                                <span style={{color:"green"}}>Sol{'\u00A0'}{'\u00A0'}</span>{rem1}
+                            </div>
                         </div>
                     </div>
                     <div className='result-major'>
                         <div className='result-major-left'>
-                            {m2}
+                            <div className='result-major-left-up'>
+                                Average Model
+                            </div>
+                            <div className='result-major-left-bottom'>
+                                {m2}
+                            </div>
                         </div>
                         <div className='result-major-right'>
-                            {info2}
+                            <div className='result-major-right-up'>
+                                <span style={{color:"red"}}>Info{'\u00A0'}{'\u00A0'}</span>{info2}
+                            </div>
+                            <div className='result-major-right-down'>
+                                <span style={{color:"green"}}>Sol{'\u00A0'}{'\u00A0'}</span>{rem2}
+                            </div>
                         </div>
                     </div>
                     <div className='result-major'>
                         <div className='result-major-left'>
-                            {m3}
+                            <div className='result-major-left-up'>
+                                Average Model
+                            </div>
+                            <div className='result-major-left-bottom'>
+                                {m3}
+                            </div>
                         </div>
                         <div className='result-major-right'>
-                            {info3}
+                            <div className='result-major-right-up'>
+                                <span style={{color:"red"}}>Info{'\u00A0'}{'\u00A0'}</span>{info3}
+                            </div>
+                            <div className='result-major-right-down'>
+                                <span style={{color:"green"}}>Sol{'\u00A0'}{'\u00A0'}</span>{rem3}
+                            </div>
                         </div>
                     </div>
                     <div className='result-major'>
                         <div className='result-major-left'>
-                            {m4}
+                            <div className='result-major-left-up'>
+                                least Accurate Model
+                            </div>
+                            <div className='result-major-left-bottom'>
+                                {m2}
+                            </div>
                         </div>
                         <div className='result-major-right'>
-                            {info4}
+                            <div className='result-major-right-up'>
+                                <span style={{color:"red"}}>Info{'\u00A0'}{'\u00A0'}</span>{info4}
+                            </div>
+                            <div className='result-major-right-down'>
+                                <span style={{color:"green"}}>Sol{'\u00A0'}{'\u00A0'}</span>{rem4}
+                            </div>
                         </div>
                     </div>
                 </div>
