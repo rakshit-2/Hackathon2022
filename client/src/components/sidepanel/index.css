@@ -40,6 +40,12 @@
     font-weight: 600;
     margin-top: 20px;
 }
+.sidepanel-logo-image{
+    width:100%;
+    height:100%;
+    border-radius: 50%;
+    cursor: pointer;
+}
 .sidepanel-each{
     width:90%;
     height:5rem;

@@ -1,6 +1,7 @@
 import React from 'react';
 import './index.css';
 import { useState } from 'react';
+import logo from './../../images/logo.png';
 const Sidepanel = (props) => 
 {
   return (
@@ -8,7 +9,7 @@ const Sidepanel = (props) =>
     <div className='sidepanel-outer'>
         <div className='sidepanel-left'>
             <div className='sidepanel-logo' onClick={()=>{props.homeOpen()}}>
-                Logo
+                <img src={logo} className="sidepanel-logo-image"/>
             </div>
             <div className='sidepanel-each' onClick={()=>{props.loginOpen()}}>
                 Login / Signup

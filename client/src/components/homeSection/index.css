@@ -1,3 +1,30 @@
+
+.home-heading{
+    width:100%;
+    height:10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.home-logo{
+    width:20%;
+    height:100%;
+}
+.home-logo-img{
+    width:20%;
+    height:100%;
+    border-radius: 50%;
+}
+.home-heading-right{
+    width:100%;
+    height:100%;
+    display: flex;
+    align-items: center;
+    font-size: 6rem;
+    font-weight: 600;
+    justify-content: center;
+}
+
 .section1{
     width:85%;
     height:40rem;
@@ -44,4 +71,9 @@
     text-align: center;
     align-items: center;
     justify-content: center;
+}
+.vid{
+    width:100%;
+    height:80%;
+    border-radius: 10px;
 }

@@ -4,11 +4,16 @@ import { useState } from 'react';
 import section1image1 from './../../images/section1 4.svg';
 import section1image2 from './../../images/section1 1.svg';
 import section1image3 from './../../images/section1 2.svg';
-
+import logo from './../../images/logo.png';
 
 const HomeSection = (props) =>{
     return (
         <>
+        <div className='home-heading'>
+            <div className='home-heading-right'>
+                BAYMAX <span style={{color:"#80E6CF",fontSize:"30px"}}>{'\u00A0'}(hi i'm baymax your personal healthcare companion)</span>
+            </div>
+        </div>
          <div className='section1'>
             <div className='section1-left'>
                 <img src={section1image1} className='section1-left-image'/>
@@ -58,7 +63,7 @@ const HomeSection = (props) =>{
                 </div>
             </div>
             <div className='seaction1-right'>
-                <iframe width="885" height="498" src="https://www.youtube.com/embed/gIa_0h3BE2k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe className='vid' src="https://www.youtube.com/embed/gIa_0h3BE2k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
         </>
