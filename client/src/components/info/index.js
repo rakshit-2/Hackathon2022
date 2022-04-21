@@ -801,7 +801,7 @@ const Info = (props) =>
                 let a=(res.data)
                 var l=[]
                 var word=""
-                for(var i=0;i<a.length;i++)
+                for(var i=0;i<a.length-2;i++)
                 {
                     if(a[i]==="|")
                     {
@@ -811,7 +811,6 @@ const Info = (props) =>
                     else{
                         word=word+a[i]
                     }
-                    
                 }
                 l.push(word);
                 props.getChangeState(l);
@@ -953,7 +952,7 @@ const Info = (props) =>
         <div class="section-center">
           <article class="question">
               <div class="question-title">
-                  <p>Do you have <span style={{color:"red"}}>Heart Related Issues</span>? if yes then select from given options.</p>
+                  <p>Do you have <span style={{color:"red"}}>Eye Related Issues</span>? if yes then select from given options.</p>
                   <button type="button" class="question-btn">
                       <span class="plus-icon"  style={{display:change.button81}} onClick={()=>{setChange({text8:"block",button81:"none",button82:"block"})}}>
                           <i class="far fa-plus-square"></i>
@@ -1028,7 +1027,7 @@ const Info = (props) =>
         </div>
         <div class="info-button-outer">
             <div className='info-button' onClick={()=>{handleSubmit()}}>
-                Result
+                Submit Info
             </div>
         </div>
         
