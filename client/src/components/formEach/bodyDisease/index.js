@@ -15,7 +15,23 @@ const BodyDisease = (props) =>
     {name:"Cold Hands And Feets"},
     {name:"Throat Irritation"},
     {name:"fast Heart Rate"},
-    {name:"Sweating"}]
+    {name:"Sweating"},
+    {name:"Fatigue"},
+    {name:"Chills"},
+    {name:"Malaise"},
+    {name:"Excessive Hunger"},
+    {name:"Lethargy"},
+    {name:"Phlegm"},
+    {name:"Swelled Lymph Nodes"},
+    {name:"Swelling Joints"},
+    {name:"Obesity"},
+    {name:"Restlessness"},
+    {name:"Red Spots Over Body"},
+    {name:"Stiff Neck"},
+    {name:"Mood Swings"},
+    {name:"Continuous Sneezing"},
+    {name:"Acidity"},
+  ]
     
     useEffect(()=>{
     setUser(userData);

@@ -5,7 +5,9 @@ const EyeDisease = (props) =>
     const[user,setUser]=useState([])
     const userData=[
     {name:"Redness Of Eyes"},
-    {name:"Watering From Eyes"}]
+    {name:"Watering From Eyes"},
+    {name:"Yellowing Of Eyes"},
+    {name:"Blurred And Distorted Vision"}]
     useEffect(()=>{
     setUser(userData);
     },[]);

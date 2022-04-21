@@ -8,7 +8,8 @@ const GenitalDisease = (props) =>
     {name:"Continuous Feel Of Urine"},
     {name:"Dark Urine"},
     {name:"Yellow Urine"},
-    {name:"Polyuria"},]
+    {name:"Polyuria"},
+    {name:"Burning Micturition"},]
     
     useEffect(()=>{
     setUser(userData);

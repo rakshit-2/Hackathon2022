@@ -7,7 +7,8 @@ const MouthDisease = (props) =>
     {name:"Cough"},
     {name:"Ulcers On Tongue"},
     {name:"Patches In Throat"},
-    {name:"Slurred Speech"},]
+    {name:"Slurred Speech"},
+    {name:"Breathlessness"},]
     
     useEffect(()=>{
     setUser(userData);

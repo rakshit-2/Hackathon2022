@@ -8,7 +8,10 @@ const BrainDisease = (props) =>
     {name:"Depression"},
     {name:"Altered Sensorium"},
     {name:"Lack Of Concentration"},
-    {name:"Unsteadiness"},]
+    {name:"Unsteadines"},
+    {name:"Headache"},
+    {name:"Irritability"},
+    {name:"Dizziness"},]
     useEffect(()=>{
     setUser(userData);
     },[]);

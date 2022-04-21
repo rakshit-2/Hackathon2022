@@ -314,6 +314,22 @@ const Info = (props) =>
     const[ThroatIrritation,setThroatIrritation]=useState(0);
     const[FastHeartRate,setFastHeartRate]=useState(0)
     const[Sweating,setSweating]=useState(0);
+    const[Fatigue,setFatigue]=useState(0);
+    const[Chills,setChills]=useState(0)
+    const[Malaise,setMalaise]=useState(0);
+    const[ExcessiveHunger,setExcessiveHunger]=useState(0)
+    const[Lethargy,setLethargy]=useState(0);
+    const[Phlegm,setPhlegm]=useState(0);
+    const[SwelledLymphNodes,setSwelledLymphNodes]=useState(0)
+    const[SwellingJoints,setSwellingJoints]=useState(0);
+    const[Obesity,setObesity]=useState(0)
+    const[Restlessness,setRestlessness]=useState(0);
+    const[RedSpotsOverBody,setRedSpotsOverBody]=useState(0)
+    const[StiffNeck,setStiffNeck]=useState(0);
+    const[MoodSwings,setMoodSwings]=useState(0)
+    const[ContinuousSneezing,setContinuousSneezing]=useState(0);
+    const[Acidity,setAcidity]=useState(0);
+
     function handleChangeBody(e,i)
     {
     if(i==='Loss Of Appetite')
@@ -448,6 +464,163 @@ const Info = (props) =>
             setSweating(0)
         }
     }
+
+    else if(i==="setFatigue")
+    {
+        if(e===true)
+        {
+            setFatigue(1)
+        }
+        else
+        {
+            setFatigue(0)
+        }
+    }
+    else if(i==="Chills")
+    {
+        if(e===true)
+        {
+            setChills(1)
+        }
+        else
+        {
+            setChills(0)
+        }
+    }
+    else if(i==="Malaise")
+    {
+        if(e===true)
+        {
+            setMalaise(1)
+        }
+        else
+        {
+            setMalaise(0)
+        }
+    }
+    else if(i==="ExcessiveHunger")
+    {
+        if(e===true)
+        {
+            setExcessiveHunger(1)
+        }
+        else
+        {
+            setExcessiveHunger(0)
+        }
+    }
+    else if(i==="Lethargy")
+    {
+        if(e===true)
+        {
+            setLethargy(1)
+        }
+        else
+        {
+            setLethargy(0)
+        }
+    }
+    else if(i==="Phlegm")
+    {
+        if(e===true)
+        {
+            setPhlegm(1)
+        }
+        else
+        {
+            setPhlegm(0)
+        }
+    }else if(i==="SwelledLymphNodes")
+    {
+        if(e===true)
+        {
+            setSwelledLymphNodes(1)
+        }
+        else
+        {
+            setSwelledLymphNodes(0)
+        }
+    }else if(i==="SwellingJoints")
+    {
+        if(e===true)
+        {
+            setSwellingJoints(1)
+        }
+        else
+        {
+            setSwellingJoints(0)
+        }
+    }else if(i==="Obesity")
+    {
+        if(e===true)
+        {
+            setObesity(1)
+        }
+        else
+        {
+            setObesity(0)
+        }
+    }else if(i==="Restlessness")
+    {
+        if(e===true)
+        {
+            setRestlessness(1)
+        }
+        else
+        {
+            setRestlessness(0)
+        }
+    }else if(i==="RedSpotsOverBody")
+    {
+        if(e===true)
+        {
+            setRedSpotsOverBody(1)
+        }
+        else
+        {
+            setRedSpotsOverBody(0)
+        }
+    }else if(i==="StiffNeck")
+    {
+        if(e===true)
+        {
+            setStiffNeck(1)
+        }
+        else
+        {
+            setStiffNeck(0)
+        }
+    }else if(i==="MoodSwings")
+    {
+        if(e===true)
+        {
+            setMoodSwings(1)
+        }
+        else
+        {
+            setMoodSwings(0)
+        }
+    }else if(i==="ContinuousSneezing")
+    {
+        if(e===true)
+        {
+            setContinuousSneezing(1)
+        }
+        else
+        {
+            setContinuousSneezing(0)
+        }
+    }else if(i==="Acidity")
+    {
+        if(e===true)
+        {
+            setAcidity(1)
+        }
+        else
+        {
+            setAcidity(0)
+        }
+    }
     }  
 
     // --------brain
@@ -456,6 +629,10 @@ const Info = (props) =>
     const[AlteredSensorium,setAlteredSensorium]=useState(0);
     const[LackOfConcentration,setLackOfConcentration]=useState(0)
     const[Unsteadiness,setUnsteadiness]=useState(0)
+    const[Headache,setHeadache]=useState(0)
+    const[Irritability,setIrritability]=useState(0);
+    const[Dizziness,setDizziness]=useState(0)
+
     function handleChangeBrain(e,i)
     {
     if(i==="Anxiety")
@@ -513,6 +690,39 @@ const Info = (props) =>
             setUnsteadiness(0)
         }
     }
+    else if(i==="Headache")
+    {
+        if(e===true)
+        {
+            setHeadache(1)
+        }
+        else
+        {
+            setHeadache(0)
+        }
+    }
+    else if(i==="Irritability")
+    {
+        if(e===true)
+        {
+            setIrritability(1)
+        }
+        else
+        {
+            setIrritability(0)
+        }
+    }
+    else if(i==="Dizziness")
+    {
+        if(e===true)
+        {
+            setDizziness(1)
+        }
+        else
+        {
+            setDizziness(0)
+        }
+    }
     }
 
     // ---------genital
@@ -521,6 +731,7 @@ const Info = (props) =>
     const[DarkUrine,setDarkUrine]=useState(0);
     const[YellowUrine,setYellowUrine]=useState(0);
     const[Polyuria,setPolyuria]=useState(0);
+    const[BurningMicturition,setBurningMicturition]=useState(0);
     function handleChangeGenital(e,i)
     {
     if(i==="Abnormal Menstruation")
@@ -578,11 +789,24 @@ const Info = (props) =>
             setPolyuria(0)
         }
     }
+    else if(i==="Burning Micturition")
+    {
+        if(e===true)
+        {
+            setBurningMicturition(1)
+        }
+        else
+        {
+            setBurningMicturition(0)
+        }
+    }
     }
 
     // ------------------Eyes
     const[RednessOfEyes,setRednessOfEyes]=useState(0);
     const[WateringFromEyes,setWateringFromEyes]=useState(0);
+    const[YellowingOfEyes,setYellowingOfEyes]=useState(0);
+    const[BlurredAndDistortedVision,setBlurredAndDistortedVision]=useState(0);
     function handleChangeEyes(e,i)
     {
     if(i==="Redness Of Eyes")
@@ -596,7 +820,7 @@ const Info = (props) =>
             setRednessOfEyes(0)
         }
     }
-    if(i==="Watering From Eyes")
+    else if(i==="Watering From Eyes")
     {
         if(e===true)
         {
@@ -605,6 +829,28 @@ const Info = (props) =>
         else
         {
             setWateringFromEyes(0)
+        }
+    }
+    else if(i==="Yellowing Of Eyes")
+    {
+        if(e===true)
+        {
+            setYellowingOfEyes(1)
+        }
+        else
+        {
+            setYellowingOfEyes(0)
+        }
+    }
+    else if(i==="Blurred And Distorted Vision")
+    {
+        if(e===true)
+        {
+            setBlurredAndDistortedVision(1)
+        }
+        else
+        {
+            setBlurredAndDistortedVision(0)
         }
     }
     }
@@ -643,6 +889,7 @@ const Info = (props) =>
     const[UlcersOnTongue,setUlcersOnTongue]=useState(0)
     const[PatchesInThroat,setPatchesInThroat]=useState(0);
     const[SlurredSpeech,setSlurredSpeech]=useState(0);
+    const[Breathlessness,setBreathlessness]=useState(0);
     function handleChangeMouth(e,i)
     {
     if(i==="Cough")
@@ -687,6 +934,17 @@ const Info = (props) =>
         else
         {
             setSlurredSpeech(0)
+        }
+    }
+    else if(i==="Breathlessness")
+    {
+        if(e===true)
+        {
+            setBreathlessness(1)
+        }
+        else
+        {
+            setBreathlessness(0)
         }
     }
     }
@@ -1024,21 +1282,24 @@ const Info = (props) =>
         var ans="";
         var li=[]
         var lis=[LossOfAppetite, LossOfBalance, LossOfSmell, WeightGain, WeightLoss, 
-            MuscleWeakness, HighFever, MildFever, ColdHandsAndFeets, ThroatIrritation, FastHeartRate, Sweating
+            MuscleWeakness, HighFever, MildFever, ColdHandsAndFeets, ThroatIrritation, FastHeartRate, Sweating,
+            Fatigue , Chills , Malaise , ExcessiveHunger , Lethargy , Phlegm , SwelledLymphNodes , SwellingJoints , Obesity 
+            , Restlessness , RedSpotsOverBody , StiffNeck , MoodSwings , ContinuousSneezing , Acidity ,
             ,PainfulWalking, BellyPain, MusclePain, HipJointPain, KneePain, NeckPain, 
             PainInAnalRegion, PainDuringBowelMovements, ChestPain, AbdominalPain, BackPain, PainBehindTheEyes, StomachPain, JointPain
-            ,RednessOfEyes, WateringFromEyes,SwellingOfStomach, Indigestion, Diarrhoea, 
-            Constipation, StomachBleeding,Cough, UlcersOnTongue, PatchesInThroat, SlurredSpeech
-            ,Anxiety, Depression, AlteredSensorium, LackOfConcentration, Unsteadiness,
-            AbnormalMenstruation, ContinuousFeelOfUrine, DarkUrine, YellowUrine, Polyuria,Blackheads, 
+            ,RednessOfEyes, WateringFromEyes,YellowingOfEyes, BlurredAndDistortedVision,SwellingOfStomach, Indigestion, Diarrhoea, 
+            Constipation, StomachBleeding,Cough, UlcersOnTongue, PatchesInThroat, SlurredSpeech,Breathlessness
+            ,Anxiety, Depression, AlteredSensorium, LackOfConcentration, Unsteadiness,Headache , Irritability , Dizziness ,
+            AbnormalMenstruation, ContinuousFeelOfUrine, DarkUrine, YellowUrine, Polyuria,BurningMicturition,Blackheads, 
             SkinRash, Itching, InternalItching, SkinPeeling,
             SwollenLegs, ProminentVeinsOnCalf]
-        var lis1=["Loss Of Appetite", "Loss Of Balance", "Loss Of Smell", "Weight Gain", "Weight Loss", "Muscle Weakness", "High Fever", "Mild Fever", "Cold Hands And Feets", "Throat Irritation", "Fast Heart Rate", "Sweating",
+        var lis1=["Loss Of Appetite", "Loss Of Balance", "Loss Of Smell", "Weight Gain", "Weight Loss", "Muscle Weakness", "High Fever", "Mild Fever", "Cold Hands And Feets", "Throat Irritation", "Fast Heart Rate", "Sweating"
+        ,"Fatigue", "Chills", "Malaise", "Excessive Hunger", "Lethargy", "Phlegm", "Swelled Lymph Nodes", "Swelling Joints", "Obesity", "Restlessness", "Red Spots Over Body", "Stiff Neck", "Mood Swings", "Continuous Sneezing", "Acidity",
         "Painful Walking", "Belly Pain", "Muscle Pain", "Hip Joint Pain", "Knee Pain", "Neck Pain", "Pain In Anal Region", "Pain During Bowel Movements", "Chest Pain", "Abdominal Pain", "Back Pain", "Pain Behind The Eyes",
-        "Stomach Pain", "Joint Pain","Redness Of Eyes", "Watering From Eyes","Swelling Of Stomach", "Indigestion", "Diarrhoea", "Constipation", "Stomach Bleeding","Cough", "Ulcers On Tongue", "Patches In Throat", "Slurred Speech",
-        "Anxiety", "Depression", "Altered Sensorium", "Lack Of Concentration", "Unsteadiness","Abnormal Menstruation", "Continuous Feel Of Urine", "Dark Urine", "Yellow Urine", "Polyuria","Blackheads", "Skin Rash", "Itching", 
+        "Stomach Pain", "Joint Pain","Redness Of Eyes", "Watering From Eyes","Yellowing Of Eyes", "Blurred And Distorted Vision","Swelling Of Stomach", "Indigestion", "Diarrhoea", "Constipation", "Stomach Bleeding","Cough", "Ulcers On Tongue", "Patches In Throat", "Slurred Speech","Breathlessness",
+        "Anxiety", "Depression", "Altered Sensorium", "Lack Of Concentration", "Unsteadiness","Headache", "Irritability", "Dizziness","Abnormal Menstruation", "Continuous Feel Of Urine", "Dark Urine", "Yellow Urine", "Polyuria","Burning Micturition","Blackheads", "Skin Rash", "Itching", 
         "Internal Itching", "Skin Peeling","Swollen Legs", "Prominent Veins On Calf"]
-        for(var i=0;i<54;i++)
+        for(var i=0;i<lis1.length;i++)
         {
             if(lis[i]==1)
             {
@@ -1407,7 +1668,7 @@ const Info = (props) =>
                                 least Accurate Model
                             </div>
                             <div className='result-major-left-bottom'>
-                                {m2}
+                                {m4}
                             </div>
                         </div>
                         <div className='result-major-right'>

@@ -83,14 +83,14 @@ def predictDisease(symptoms):
 #     ans 
 # # Testing the function
 # print(predictDisease(str(sys.argv[1])))
-# val=(predictDisease("Itching,Anxiety,High Fever\r\n"))
+print(predictDisease("Yellowing Of Eyes,Blurred And Distorted Vision"))
 
 # ss=sys.argv[1].strip("\n","\r")
 # ss=ss.replace("\n","")
 # ss=ss.replace("\r","")
 
-ss=sys.argv[1]
-print(predictDisease(ss))
+# ss=sys.argv[1]
+# print(predictDisease(ss))
 
 # li=ss.strip(',')
 # for i in range(0,len(li)):
