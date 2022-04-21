@@ -10,7 +10,6 @@ const Profile = (props) =>
 
 
   const[name,setName]=useState("");
-  const[email,setEmail]=useState("");
   const[age,setAge]=useState(0);
   const[phone,setPhone]=useState(0);
   const[address,setAddress]=useState("");
@@ -22,12 +21,13 @@ const Profile = (props) =>
     Axios.post('http://localhost:3001/profile',
     {
       name:name,
-      email:email,
+      email:props.authInfo.email,
       age:age,
       phone:phone,
       address:address,
     }).then((res)=>{
       console.log(res);
+      props.handleProfile();
     });
   }
   return (
@@ -39,13 +39,13 @@ const Profile = (props) =>
           <div className='profile-user-details'>
             <div className='profile-input-box'>
               <div className='profile-details'>Full Name</div>
-              <input className='profile-input'  onChange={(e)=>{setName(e.target.value)}}    type='text' placeholder='Enter your name' required></input>
+              <input className='profile-input'  onChange={(e)=>{setName(e.target.value)}}    type='text' placeholder={props.authInfo.name} required></input>
 
             </div>
             
             <div className='profile-input-box'>
               <div className='profile-details'>Email</div>
-              <input className='profile-input' onChange={(e)=>{setEmail(e.target.value)}} type='text' placeholder='Enter your email' required></input>
+              <input className='profile-input' type='text' style={{cursor:"not-allowed"}} placeholder={props.authInfo.email} required></input>
               
             </div>
             <div className='profile-input-box'>

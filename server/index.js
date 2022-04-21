@@ -58,7 +58,7 @@ app.post('/insert/signup',(req,res)=>{
     var password=req.body.password;
     const ele="insert into baymax (name,email,password) values(?,?,?);";
     db.query(ele,[name,email,password],(err,result)=>{
-        console.log(result);
+        res.send(result);
     })
     
 })
@@ -72,7 +72,7 @@ app.post('/profile',(req,res)=>{
     var pincode=req.body.pincode;
     const ele1="UPDATE baymax SET name = ?, age = ?,phone = ?, location = ? WHERE email=?;";
     db.query(ele1,[name,age,phone,address,email],(err,result)=>{
-        console.log(result);
+        res.send(result);
     })
 })
 

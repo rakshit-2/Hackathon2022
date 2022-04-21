@@ -75,7 +75,7 @@ const Auth = (props) =>
         email:createEmail,
         password:createPass,
       }).then(()=>{
-        console.log("successful signup");
+        props.handleSignUp(createName,createEmail,createPass);
       });
     }
     else
@@ -92,13 +92,13 @@ const Auth = (props) =>
     Axios.get('http://localhost:3001/get/login',
     {
       params:{
-        email:createEmail,
+        email:checkEmail,
       }
     }).then((res)=>{
       console.log(res)
-      if(res.data[0].password==createPass)
+      if(res.data[0].password==checkPass)
       {
-        console.log("logged in")
+        props.handleLogin(checkEmail,checkPass)
       }
     });
   }
